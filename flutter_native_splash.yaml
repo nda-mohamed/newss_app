@@ -1,0 +1,32 @@
+flutter_native_splash:
+  # الألوان للوضع العادي
+  color_dark: "#171717"
+  color: "#FFFFFF"
+
+  android: true
+  ios: true
+
+  # الصور للوضع العادي
+  image: assets/splash/light.png
+  image_dark: assets/splash/dark.png
+
+  # البراندينج للوضع العادي
+  branding: assets/splash/branding_light.png
+  branding_dark: assets/splash/branding_dark.png
+  branding_mode: bottom
+  branding_bottom_padding: 24
+
+  # إعدادات Android 12+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#171717"
+
+    # الصور لـ Android 12
+    image: assets/splash/logo_light.png
+    image_dark: assets/splash/logo_dark.png
+
+    # البراندينج لـ Android 12
+    branding: assets/splash/branding_light.png
+    branding_dark: assets/splash/branding_dark.png
+    branding_mode: bottom
+    branding_bottom_padding: 24
