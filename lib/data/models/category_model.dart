@@ -1,17 +1,18 @@
-class Category{
+class CategoryModel{
   final String? lightImage;
   final String? darkImage;
   final String title;
+  final String? id;
 
-  Category(this.title, this.lightImage, this.darkImage);
+  CategoryModel(this.title, this.lightImage, this.darkImage, this.id);
   
-  static List<Category> categories = [
-    Category('General', 'assets/general.png', 'assets/general_dark.png'),
-    Category('Business', 'assets/busniess.png', 'assets/busniess_dark.png'),
-    Category('Entertainment', 'assets/entertainment.png', 'assets/entertainment_dark.png'),
-    Category('Health', 'assets/helth.png', 'assets/helth_dark.png'),
-    Category('Science', 'assets/science.png', 'assets/science_dark.png'),
-    Category('Technology', 'assets/technology.png', 'assets/technology_dark.png'),
-    Category('Sport', 'assets/sport.png', 'assets/sport_dark.png'),
+  static List<CategoryModel> categories = [
+    CategoryModel('General', 'assets/general.png', 'assets/general_dark.png', 'general'),
+    CategoryModel('Business', 'assets/busniess.png', 'assets/busniess_dark.png', 'business'),
+    CategoryModel('Entertainment', 'assets/entertainment.png', 'assets/entertainment_dark.png', 'entertainment'),
+    CategoryModel('Health', 'assets/helth.png', 'assets/helth_dark.png', 'health'),
+    CategoryModel('Science', 'assets/science.png', 'assets/science_dark.png', 'science'),
+    CategoryModel('Technology', 'assets/technology.png', 'assets/technology_dark.png', 'technology'),
+    CategoryModel('Sports', 'assets/sport.png', 'assets/sport_dark.png', 'sports'),
   ];
 }

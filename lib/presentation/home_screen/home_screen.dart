@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newss_app/presentation/common/widgets/custom_scaffold.dart';
-import 'package:newss_app/presentation/home_screen/widgets/category_widgets.dart';
+import 'package:newss_app/presentation/home_screen/widgets/category_card.dart';
 import '/data/models/category_model.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -26,14 +26,14 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: ListView.separated(
               itemBuilder: (context, index) {
-                var category = Category.categories[index];
+                var category = CategoryModel.categories[index];
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                  child: CategoryWidget(category: category, index: index),
+                  child: CategoryCard(category: category, index: index),
                 );
               },
               separatorBuilder: (context, index) => SizedBox(height: 10),
-              itemCount: Category.categories.length,
+              itemCount: CategoryModel.categories.length,
             ),
           ),
         ],

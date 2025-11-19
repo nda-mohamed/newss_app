@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: themeProvider.getThemeMode,
 
-      initialRoute: NewsView.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
         NewsView.routeName: (context) =>  NewsView(),
         HomeScreen.routeName: (context) => HomeScreen(),

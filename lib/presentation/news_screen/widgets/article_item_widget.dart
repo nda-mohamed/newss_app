@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:newss_app/extentions/DateFormat.dart';
 import '../../../api/model/articles/Article.dart';
 
 class ArticleItemWidget extends StatelessWidget {
@@ -50,8 +51,7 @@ class ArticleItemWidget extends StatelessWidget {
             children: [
               Text(article.author ?? ''),
               Text(
-                article.publishedAt ?? "",
-                /*DateFormat('h:mm a').format(article.time ?? DateTime.now())*/
+                article.publishedAt?.formatArticleDate() ?? "",
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../api/ApiManager.dart';
+import '../../data/models/category_model.dart';
 import '../common/widgets/custom_scaffold.dart';
 import 'NewsSources.dart';
 
@@ -10,8 +11,10 @@ class NewsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var category = ModalRoute.of(context)?.settings.arguments as CategoryModel;
+
     return CustomScaffold(
-      title: 'Sport',
+      title: category.title,
       actions: [
         IconButton(
           onPressed: () {
@@ -21,7 +24,7 @@ class NewsView extends StatelessWidget {
         ),
       ],
       body: FutureBuilder(
-        future: ApiManager.getInstance().getNewsSources('sports'),
+        future: ApiManager.getInstance().getNewsSources(category.id ?? ''),
         builder: (context, snapshot) {
           if(snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
